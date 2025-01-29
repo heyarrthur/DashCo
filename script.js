@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     const validLogins = [
         { username: 'admin', password: '1234', redirect: 'dashadmin/index.html' },
         { username: 'robison.ferreira@dex.co', password: 'Robisonribeiro', redirect: 'dash/index.html' },
-        { username: 'usuario', password: 'senha', redirect: 'dashusuario/index.html' }
+        { username: 'arthur.ferreira@unimedjf.coop.br', password: '0201@RthuR', redirect: 'dashArthur/index.html' }
     ];
 
     // Verifica se o login é válido

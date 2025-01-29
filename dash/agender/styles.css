@@ -326,3 +326,67 @@ button:hover {
     font-size: 12px;
     margin-top: 5px;
 }
+
+/* Cores de fundo para as categorias */
+.card-event .card-category.importante {
+    background-color: #e74c3c; /* Vermelho para Importante */
+    color: white;
+}
+
+.card-event .card-category.media {
+    background-color: #f39c12; /* Amarelo para Média */
+    color: white;
+}
+
+.card-event .card-category.basica {
+    background-color: #2ecc71; /* Verde para Básica */
+    color: white;
+}
+
+/* Estilo para os cards */
+.card-event {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-description,
+.card-location,
+.card-time {
+    margin: 5px 0;
+}
+
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-actions button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.card-actions button:hover {
+    color: #007bff;
+}
+
+.card-actions .check-btn {
+    color: #28a745;
+}
+
+.card-actions .delete-btn {
+    color: #dc3545;
+}
