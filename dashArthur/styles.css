@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+    background-color: #2d3436; /* Fundo mais escuro, mas não totalmente preto */
+    color: #ecf0f1;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    color: #2c3e50;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #ddd;
+    transition: box-shadow 0.3s ease, background-color 0.3s;
+}
+
+body.dark-theme .navbar {
+    background-color: #34495e; /* Navbar em tom escuro */
+    color: #ecf0f1;
+}
+
+.navbar:hover {
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#profile-img {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#profile-img:hover {
+    transform: scale(1.1);
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+body.dark-theme h3 {
+    color: #ecf0f1;
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #7f8c8d;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme nav ul li a {
+    color: #ecf0f1;
+}
+
+nav ul li a:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+body.dark-theme nav ul li a:hover {
+    background-color: #2980b9;
+}
+
+button#logout-btn {
+    margin-top: auto;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+button#logout-btn:hover {
+    background-color: #c0392b;
+}
+
+button#logout-btn:focus {
+    outline: none;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+body.dark-theme #theme-toggle {
+    color: #ecf0f1;
+}
+
+/* Adicionando ícones nas categorias da navbar */
+nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav ul li a i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* Sombra à direita da Navbar */
+.navbar {
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .navbar {
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.3); /* Sombra mais forte no tema escuro */
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.content {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards se ajustem para a próxima linha */
+    gap: 10px; /* Espaçamento reduzido entre os cards */
+    justify-content: flex-start; /* Alinha os cards à esquerda */
+    width: 100%;
+    max-width: 1200px; /* Limita o tamanho do conteúdo para não ultrapassar a largura da tela */
+    margin-left: 265px; /* Adiciona a margem à esquerda */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* 3 cards por linha, com espaçamento entre eles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 270px; /* Altura reduzida do card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Cabeçalho do card */
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 14px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+}
+
+.card-header h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Descrição */
+.description {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Botão */
+.card-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #2980b9;
+}
+
+.card-button i {
+    margin-left: 5px;
+}
+
+.courses-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards ocupem várias linhas */
+    gap: 15px; /* Espaçamento entre os cards */
+    justify-content: flex-start; /* Alinha os cards à esquerda */
+    margin-top: 30px;
+}
+
+.courses-container .card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* 3 cards por linha com espaçamento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.courses-container .card:hover {
+    transform: translateY(-10px);
+}
+
+.courses-container .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.courses-container .icon {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px;
+    border-radius: 14px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+}
+
+.courses-container .card-header h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.courses-container .description {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.courses-container .card-button {
+    display: inline-block;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.courses-container .card-button:hover {
+    background-color: #e67e22;
+}
+
+.section-title {
+    margin-top: 15px;
+    font-size: 34px;
+    font-weight: bold;
+    color: #0c0c0c;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 10px;
+}
+
