@@ -13,7 +13,8 @@ body {
 }
 
 body.dark-theme {
-    background-color: #2d3436; /* Fundo mais escuro, mas não totalmente preto */
+    background-color: #2d3436;
+    /* Fundo mais escuro, mas não totalmente preto */
     color: #ecf0f1;
 }
 
@@ -35,7 +36,8 @@ body.dark-theme {
 }
 
 body.dark-theme .navbar {
-    background-color: #34495e; /* Navbar em tom escuro */
+    background-color: #34495e;
+    /* Navbar em tom escuro */
     color: #ecf0f1;
 }
 
@@ -165,7 +167,8 @@ nav ul li a i {
 }
 
 body.dark-theme .navbar {
-    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.3); /* Sombra mais forte no tema escuro */
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.3);
+    /* Sombra mais forte no tema escuro */
 }
 
 /* Estilos gerais */
@@ -181,22 +184,29 @@ body {
 .content {
     margin-top: 15px;
     display: flex;
-    flex-wrap: wrap; /* Permite que os cards se ajustem para a próxima linha */
-    gap: 10px; /* Espaçamento reduzido entre os cards */
-    justify-content: flex-start; /* Alinha os cards à esquerda */
+    flex-wrap: wrap;
+    /* Permite que os cards se ajustem para a próxima linha */
+    gap: 10px;
+    /* Espaçamento reduzido entre os cards */
+    justify-content: flex-start;
+    /* Alinha os cards à esquerda */
     width: 100%;
-    max-width: 1200px; /* Limita o tamanho do conteúdo para não ultrapassar a largura da tela */
-    margin-left: 265px; /* Adiciona a margem à esquerda */
+    max-width: 1200px;
+    /* Limita o tamanho do conteúdo para não ultrapassar a largura da tela */
+    margin-left: 265px;
+    /* Adiciona a margem à esquerda */
 }
 
 .card {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    width: calc(33.33% - 20px); /* 3 cards por linha, com espaçamento entre eles */
+    width: calc(33.33% - 20px);
+    /* 3 cards por linha, com espaçamento entre eles */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    height: 270px; /* Altura reduzida do card */
+    height: 270px;
+    /* Altura reduzida do card */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -261,9 +271,12 @@ body {
 
 .courses-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que os cards ocupem várias linhas */
-    gap: 15px; /* Espaçamento entre os cards */
-    justify-content: flex-start; /* Alinha os cards à esquerda */
+    flex-wrap: wrap;
+    /* Permite que os cards ocupem várias linhas */
+    gap: 15px;
+    /* Espaçamento entre os cards */
+    justify-content: flex-start;
+    /* Alinha os cards à esquerda */
     margin-top: 30px;
 }
 
@@ -271,7 +284,8 @@ body {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    width: calc(33.33% - 20px); /* 3 cards por linha com espaçamento */
+    width: calc(33.33% - 20px);
+    /* 3 cards por linha com espaçamento */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     height: 200px;
@@ -340,5 +354,38 @@ body {
     margin-bottom: 20px;
     text-align: left;
     padding-left: 10px;
+}
+
+/* Estilização do campo de busca */
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 14px;
+    color: #888;
+}
+
+/* Layout dos cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
